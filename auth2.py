@@ -285,7 +285,6 @@ class D2LAppContext(object):
                 raise ValueError('result_uri and host must have values when building new contexts.')
 
             parts = urlsplit(result_uri)
-            print('PARTS', parts)
             scheme, netloc, path, query, fragment = parts[:5]
             parsed_query = parse_qs(query)
             uID = parsed_query[self.CALLBACK_USER_ID][0]
